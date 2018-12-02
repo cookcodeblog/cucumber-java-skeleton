@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+PRG="$0"
+SAVED="$(pwd)"
+cd "$(dirname "${PRG}")/../" >&- || exit 1
+CUCUMBER_HOME="$(pwd -P)"
+cd "$SAVED" >&- || exit 1
+
+#echo $CUCUMBER_HOME
+#echo ""
+	
+CLASSPATH=.
+for f in "${CUCUMBER_HOME}"/lib/*; do
+	CLASSPATH=$CLASSPATH:$f
+done
+
+#echo $CLASSPATH
+#echo ""
+
+#echo "${JAVA_HOME}/bin/java" -cp "$CLASSPATH" cucumber.api.cli.Main "$@"
+"${JAVA_HOME}/bin/java" -Dfile.encoding=UTF-8 -cp "$CLASSPATH" cucumber.api.cli.Main "$@"

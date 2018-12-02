@@ -1,3 +1,9 @@
+# 解决Git Bash和Maven运行Cucumber的中文乱码问题
+
+[解决Git Bash和Maven运行Cucumber的中文乱码问题](https://blog.csdn.net/nklinsirui/article/details/84727692)
+
+
+
 # Cucumber-Java Skeleton
 
 [![Build Status](https://travis-ci.org/cucumber/cucumber-java-skeleton.svg?branch=master)](https://travis-ci.org/cucumber/cucumber-java-skeleton)
